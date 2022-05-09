@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page for Quering</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div class="overlay">
+    <h1>Blood Donation System</h1>
+    </div>
+    <h2>Enter Your Query</h2>
+    <textarea class="text_area" id="query"></textarea><br>
+    <center>
+        <button type="submit" id="submit_btn" onclick="send_to_backend(this)">Submit Your Query</button>
+        <button type="reset" id="reset_btn" onclick="reset_outcome(this)">Reset</button><br/><br/>
+        <button type="button" id="q1" onclick="send_to_backend(this)">Blood Groups Units Available</button>
+        <button type="button" id="q2" onclick="send_to_backend(this)">Blood Bank Contacts</button>
+        <button type="button" id="q3" onclick="send_to_backend(this)">Hospital Information</button>
+    </center>
+    <h2>Outcome of Query</h2>
+    <div class="result" id="result_div">
+<!--    Sample Text-->
+    </div>
+</div>
+</body>
+<script src="{{ url_for('static', filename='js/my_script.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>
